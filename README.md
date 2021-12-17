@@ -38,7 +38,7 @@ For simplicity, I will call this USM Heterogeneous Version 1.
 
 For simplicity, I will call this USM Heterogeneous Version 2.
 
-5. [getrs_buffer_het.cpp](https://github.com/olutosinbanjo/Tridiagonal_solvers/blob/5cdb8e76d9ffa07cd31c2a567a6af6385c35f234/getrs_solver/getrs_buffer_het.cpp): Heterogeneous implementation based on buffer version of getrs(). Queues are used to define that:
+5. [getrs_buffer_het.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/6239dd21608373bf5015c7719ac44edca89a4162/getrs_buffer_het.cpp): Heterogeneous implementation based on buffer version of getrs(). Queues are used to define that:
 
 -. The factorization of the matrix is done on the GPU device;
   
