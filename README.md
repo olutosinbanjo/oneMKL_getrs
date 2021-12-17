@@ -1,4 +1,4 @@
-# oneMKL_getrs
+## oneMKL_getrs for tridiagonal linear system
 ### Homogeneous and Heterogeneous Implementations of a tridiagonal solver on Intel® Xeon® E-2176G with oneMKL getrs() routine
 
 The [getrs()](https://oneapi-src.github.io/oneMKL/domains/lapack/getrs.html#onemkl-lapack-getrs) routine belongs to the oneapi::mkl::lapack namespace, it has a unified
@@ -10,7 +10,7 @@ This routine uses partial pivoting with row interchanges, it has a USM and Buffe
                                                                                                                      
 The programs here are implementations of a Tridiagonal solver carried out for an equation of the type, A*X = B, using the buffer and USM versions and all computations are done using double precision. 
                                                                                                                        
-## Implementations
+### Implementations
 
 Homogeneous implementation: Implementation is executed on either host or gpu device.
 
@@ -46,11 +46,11 @@ For simplicity, I will call this USM Heterogeneous Version 2.
 
 For simplicity, I will call this BUFFER Heterogeneous Version 1.
 
-## Test timing Report
+### Test timing Report
 
 For timing analysis of the various implementations, see [getrs.pdf](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e2a4d7d9438d54d3539fa56013ca98a08cbbcad1/getrs_report.pdf)
 
-## Build Program
+### Build Program
 
 $ git clone https://github.com/olutosinbanjo/oneMKL_getrs.git
 
