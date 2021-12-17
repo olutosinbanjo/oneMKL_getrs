@@ -20,7 +20,7 @@ Heterogeneous implementation: Queues are used to specify what section of code us
 
 2. [getrs_buffer.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/13dcf43f07901b2c8f4199797c4a768dda5cf276/getrs_buffer.cpp): Homogeneous implementation based on buffer version of getrs implementation
 
-3. [getrs_usm_het.cpp](https://github.com/olutosinbanjo/Tridiagonal_solvers/blob/a93de190468e794b69260ae10ef831f02ae0aedd/getrs_solver/getrs_usm_het.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
+3. [getrs_usm_het.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/ab29a441f2ce506368846609deefff5d4c8ddee9/getrs_usm_het.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
 
   -. The factorization of the matrix is done on the GPU device;
   
