@@ -28,7 +28,7 @@ Heterogeneous implementation: Queues are used to specify what section of code us
 
 For simplicity, I will call this USM Heterogeneous Version 1.
 
-4.  [getrs_usm_het2.cpp](https://github.com/olutosinbanjo/Tridiagonal_solvers/blob/a93de190468e794b69260ae10ef831f02ae0aedd/getrs_solver/getrs_usm_het2.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
+4.  [getrs_usm_het2.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/0a884a7ebdde2b601fae33edf94c5f4cf66276ec/getrs_usm_het2.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
 
   -. Memory for the matrix as well as the pivot array is allocated on the GPU device while memory for the right-hand side array is allocated on the Host device;
   
