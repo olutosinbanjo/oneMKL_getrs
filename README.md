@@ -50,5 +50,8 @@ For simplicity, I will call this BUFFER Heterogeneous Version 1.
 
 For timing analysis of the various implementations, see [getrs.pdf](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e2a4d7d9438d54d3539fa56013ca98a08cbbcad1/getrs_report.pdf)
 
-## Clone repository
-```
+## Build Program
+
+$ git clone https://github.com/olutosinbanjo/oneMKL_getrs.git
+$ make build_all 
+$ ./executable n (n = size of matrix)
