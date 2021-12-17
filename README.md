@@ -16,7 +16,7 @@ Homogeneous implementation: Implementation is executed on either host or gpu dev
 
 Heterogeneous implementation: Queues are used to specify what section of code uses a particular device. 
 
-1. [getrs_usm.cpp](https://github.com/olutosinbanjo/Tridiagonal_solvers/blob/a93de190468e794b69260ae10ef831f02ae0aedd/getrs_solver/getrs_usm.cpp): Homogeneous implementation based on Unified Shared Memory version of getrs(). This implementation can be executed on either host or gpu device.
+1. [getrs_usm.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/b7e9a682fa0b619c6bebe2bab996d18f8cf2df87/getrs_usm.cpp): Homogeneous implementation based on Unified Shared Memory version of getrs(). This implementation can be executed on either host or gpu device.
 
 2. [getrs_buffer.cpp](https://github.com/olutosinbanjo/Tridiagonal_solvers/blob/a93de190468e794b69260ae10ef831f02ae0aedd/getrs_solver/getrs_buffer.cpp): Homogeneous implementation based on buffer version of getrs implementation
 
