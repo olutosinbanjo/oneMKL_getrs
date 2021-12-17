@@ -48,4 +48,4 @@ For simplicity, I will call this BUFFER Heterogeneous Version 1.
 
 ## Test Report
 
-For timing analysis of the various implementations, see [getrs.pdf](https://github.com/olutosinbanjo/Tridiagonal_solvers/blob/5ad7f795dd7107a3860103532630e3040c29d46e/getrs_solver/getrs.pdf)
+For timing analysis of the various implementations, see [getrs.pdf](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e2a4d7d9438d54d3539fa56013ca98a08cbbcad1/getrs_report.pdf)
