@@ -53,5 +53,7 @@ For timing analysis of the various implementations, see [getrs.pdf](https://gith
 ## Build Program
 
 $ git clone https://github.com/olutosinbanjo/oneMKL_getrs.git
+
 $ make build_all 
+
 $ ./executable n (n = size of matrix)
