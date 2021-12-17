@@ -50,9 +50,11 @@ For simplicity, I will call this BUFFER Heterogeneous Version 1.
 
 For timing analysis of the various implementations, see [getrs.pdf](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e2a4d7d9438d54d3539fa56013ca98a08cbbcad1/getrs_report.pdf)
 
-### Build Program
+### Build Program on the intel devcloud
 
 $ git clone https://github.com/olutosinbanjo/oneMKL_getrs.git
+
+$ qsub -I -l nodes=1:gpu:ppn=2 -d .
 
 $ make build_all 
 
