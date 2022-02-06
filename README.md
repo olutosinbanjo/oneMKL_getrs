@@ -92,7 +92,7 @@ cd bin
 
 ### Overall Best Implementation
 
-Relative to the choice of device and data size. [See report](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e1c4f68cd2b190c36be284e44c373729137887e8/getrs_report.pdf).
+Relative to the choice of device and data size. [See report](https://github.com/olutosinbanjo/oneMKL_getrs/blob/f45fe4f71195f6996e14dc7e4710bf341a646b7f/getrs_report.pdf)
 
 ### Intel DevCloud 
 
