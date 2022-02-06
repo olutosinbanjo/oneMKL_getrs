@@ -16,50 +16,68 @@ Homogeneous implementation: Implementation is executed on either host or gpu dev
 
 Heterogeneous implementation: Queues are used to specify what section of code uses a particular device. 
 
-1. [getrs_usm.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/b7e9a682fa0b619c6bebe2bab996d18f8cf2df87/getrs_usm.cpp): Homogeneous implementation based on Unified Shared Memory version of getrs(). This implementation can be executed on either host or gpu device.
+1. [getrs_usm.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/b30786fab72070924d22037e62b349c70fc0ee7a/src/getrs_usm.cpp): Homogeneous implementation based on Unified Shared Memory version of getrs(). This implementation can be executed on either host or gpu device.
 
-2. [getrs_buffer.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/13dcf43f07901b2c8f4199797c4a768dda5cf276/getrs_buffer.cpp): Homogeneous implementation based on buffer version of getrs implementation
+2. [getrs_buffer.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/b30786fab72070924d22037e62b349c70fc0ee7a/src/getrs_buffer.cpp): Homogeneous implementation based on buffer version of getrs implementation
 
-3. [getrs_usm_het.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/ab29a441f2ce506368846609deefff5d4c8ddee9/getrs_usm_het.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
+3. [getrs_buffer_het.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/b30786fab72070924d22037e62b349c70fc0ee7a/src/getrs_buffer_het.cpp): Heterogeneous implementation based on buffer version of getrs(). Queues are used to define that:
 
   -. The factorization of the matrix is done on the GPU device;
   
   -. The solution of the matrix is computed on the Host device (in other words, do the getrf() on the GPU and the getrs() on the CPU).
 
-For simplicity, I will call this USM Heterogeneous Version 1.
 
-4.  [getrs_usm_het2.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/0a884a7ebdde2b601fae33edf94c5f4cf66276ec/getrs_usm_het2.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
+4. [getrs_usm_het.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/b30786fab72070924d22037e62b349c70fc0ee7a/src/getrs_usm_het.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
 
-  -. Memory for the matrix as well as the pivot array is allocated on the GPU device while memory for the right-hand side array is allocated on the Host device;
+  -. The factorization of the matrix is done on the GPU device;
   
-  -. The pointer to the scratchpad memory which is used for storing intermediate results as well as the size of the scratchpad memory for getrf() is allocated on the GPU device while that of getrs() is allocated on the Host device;
+  -. The solution of the matrix is computed on the Host device (in other words, do the getrf() on the GPU and the getrs() on the CPU).
   
-  -. Both getrf and getrs are performed on the Host device.
+  In this heterogeneous version, memory for the matrix and pivot array are accessed on the gpu device, while that of the right-hand side array is accessed on the host device. Also, the pointer to the scratchpad memory which is used for storing intermediate results as well as the size of the scratchpad memory for getrf() is accessed on the GPU device, while that of getrs() is accessed on the CPU device. 
+
+For simplicity, this is called USM Heterogeneous Version 1 in the report.
+
+5.  [getrs_usm_het2.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/b30786fab72070924d22037e62b349c70fc0ee7a/src/getrs_usm_het2.cpp):  Heterogeneous implementation based on Unified Shared Memory version of getrs(). Queues are used to define that:
+
+  -. Memory for the matrix, pivot and right-hand side array is accessed on the Host device;
+  
+  -. The pointer to the scratchpad memory which is used for storing intermediate results as well as the size of the scratchpad memory for both getrf() and getrs() is accessed on the GPU device.
+  
+  -. Both getrf and getrs are computed on the Host device.
 
 For simplicity, I will call this USM Heterogeneous Version 2.
 
-5. [getrs_buffer_het.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/6239dd21608373bf5015c7719ac44edca89a4162/getrs_buffer_het.cpp): Heterogeneous implementation based on buffer version of getrs(). Queues are used to define that:
-
--. The factorization of the matrix is done on the GPU device;
-  
-  -. The solution of the matrix is computed on the Host device (in other words, do the getrf() on the GPU and the getrs() on the CPU).
-
-For simplicity, I will call this BUFFER Heterogeneous Version 1.
-
 ### Test timing Report
 
-For timing analysis of the various implementations, see [getrs.pdf](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e2a4d7d9438d54d3539fa56013ca98a08cbbcad1/getrs_report.pdf)
+For timing analysis of the various implementations, see [getrs_report.pdf](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e2a4d7d9438d54d3539fa56013ca98a08cbbcad1/getrs_report.pdf)
 
 ### Build Program on the intel devcloud
 
-$ git clone https://github.com/olutosinbanjo/oneMKL_getrs.git
+1. Clone this repository
 
-$ qsub -I -l nodes=1:gpu:ppn=2 -d .
+```bash
+git clone https://github.com/olutosinbanjo/oneMKL_getrs.git
+```
 
-$ make build_all 
+2. Request computational node
 
-$ ./executable n (n = size of matrix)
+```bash
+qsub -I -l nodes=1:gpu:ppn=2 -d .
+```
+
+3. Build programs
+
+```bash
+./build.sh
+```
+
+4. Run executable (for example)
+
+```bash
+cd bin
+./getrs_usm n (n = size of tridiagonal system)
+```
 
 ### Best Implementation
 
-Relatice to the choice of device and data size. See report.
+Relative to the choice of device and data size. See report.
