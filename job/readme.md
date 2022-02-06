@@ -9,7 +9,7 @@ git clone https://github.com/olutosinbanjo/oneMKL_getrs.git && cd job
 2. Request a computational node
 
 ```bash
-qsub -I -l nodes=1:gpu:ppn=2 
+qsub -I -l nodes=1:gpu:ppn=2 -d .
 ```
 
 3. Submit job (for example)
