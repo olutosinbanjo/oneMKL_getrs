@@ -3,7 +3,7 @@
 1. Clone this repository
 
 ```bash
-git clone https:// && cd job
+git clone https://github.com/olutosinbanjo/oneMKL_getrs.git && cd job
 ```
 
 2. Request a computational node
