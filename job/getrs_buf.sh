@@ -2,7 +2,7 @@
 
 #PBS -l nodes=1:gpu:ppn=2,walltime=12:00:00
 #PBS -N getrs_buf
-cd ~/GITHUB/GETRS/bin/
+cd ~/oneMKL_getrs/bin/
 
 echo SIZE=500
 ./getrs_buffer 500
