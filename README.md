@@ -53,35 +53,55 @@ For timing analysis of the various implementations, see [getrs_report.pdf](https
 
 ### Build Program on the intel devcloud
 
-1. Clone this repository
+1. Connect to devcloud
+
+```bash
+ssh devcloud
+```
+
+2. Clone this repository
 
 ```bash
 git clone https://github.com/olutosinbanjo/oneMKL_getrs.git && cd oneMKL_getrs
 ```
 
-2. Request computational node
+3. Request computational node
 
 ```bash
 qsub -I -l nodes=1:gpu:ppn=2 -d .
 ```
 
-3. Build programs
+4. Build programs
 
 ```bash
 ./build.sh
 ```
 
-4. Run executable (for example)
+5. Run executable (for example)
 
 ```bash
 cd bin
 ./getrs_usm n (n = size of tridiagonal system)
 ```
 
-### Best Implementation
+6. Remove executables
+
+```bash
+./clean.sh
+```
+
+### Overall Best Implementation
 
 Relative to the choice of device and data size. [See report](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e1c4f68cd2b190c36be284e44c373729137887e8/getrs_report.pdf).
 
 ### Intel DevCloud 
 
 [Sign up for Intel DevCloud for oneAPI](https://www.intel.com/content/www/us/en/forms/idz/devcloud-enrollment/oneapi-request.html)
+
+### Learn DPC++
+
+J. Reinders, B. Ashbaugh, J. Brodman, M. Kinsner, J. Pennycook and X.
+Tian, Data Parallel C++: Mastering DPC++ for Programming of
+Heterogenous Systems using C+ and SYCL. Berkely, CA: Apress, 2021.
+[Online]. Available: https://doi.org/10.1007/978-1-4842-5574-2 
+
