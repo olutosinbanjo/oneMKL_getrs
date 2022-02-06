@@ -102,6 +102,6 @@ Relative to the choice of device and data size. [See report](https://github.com/
 
 J. Reinders, B. Ashbaugh, J. Brodman, M. Kinsner, J. Pennycook and X.
 Tian, Data Parallel C++: Mastering DPC++ for Programming of
-Heterogenous Systems using C+ and SYCL. Berkely, CA: Apress, 2021.
+Heterogenous Systems using C++ and SYCL. Berkely, CA: Apress, 2021.
 [Online]. Available: https://doi.org/10.1007/978-1-4842-5574-2 
 
