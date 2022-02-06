@@ -56,7 +56,7 @@ For timing analysis of the various implementations, see [getrs_report.pdf](https
 1. Clone this repository
 
 ```bash
-git clone https://github.com/olutosinbanjo/oneMKL_getrs.git
+git clone https://github.com/olutosinbanjo/oneMKL_getrs.git && cd oneMKL_getrs
 ```
 
 2. Request computational node
