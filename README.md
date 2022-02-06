@@ -80,4 +80,4 @@ cd bin
 
 ### Best Implementation
 
-Relative to the choice of device and data size. See report.
+Relative to the choice of device and data size. [See report.](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e1c4f68cd2b190c36be284e44c373729137887e8/getrs_report.pdf).
