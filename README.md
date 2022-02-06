@@ -62,4 +62,4 @@ $ ./executable n (n = size of matrix)
 
 ### Best Implementation
 
-USM heterogeneous version 2 :  [getrs_usm_het2.cpp](https://github.com/olutosinbanjo/oneMKL_getrs/blob/0a884a7ebdde2b601fae33edf94c5f4cf66276ec/getrs_usm_het2.cpp)
+Relatice to the choice of device and data size. See report.
