@@ -81,3 +81,7 @@ cd bin
 ### Best Implementation
 
 Relative to the choice of device and data size. [See report](https://github.com/olutosinbanjo/oneMKL_getrs/blob/e1c4f68cd2b190c36be284e44c373729137887e8/getrs_report.pdf).
+
+### Intel DevCloud 
+
+[Sign up for Intel DevCloud for oneAPI](https://www.intel.com/content/www/us/en/forms/idz/devcloud-enrollment/oneapi-request.html)
