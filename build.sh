@@ -5,6 +5,6 @@ echo "Creating "bin" directory for executables..."
 mkdir bin
 echo "Created "bin" directory for executables"
 make 
-mv getrs* ~/oneMKL_getrs-main/bin/ 
+mv getrs* ~/oneMKL_getrs/bin/ 
 echo "Executables are now in "bin" directory"
 echo "Enter cd bin"
