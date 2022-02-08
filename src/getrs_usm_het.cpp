@@ -1,3 +1,13 @@
+/**
+*
+* oneMKL getrs USM version
+*
+* Use case - Tridiagonal linear system
+*
+* Type - Heterogeneous (version 1)
+*
+**/
+
 // MKL/SYCL includes
 #include "oneapi/mkl/lapack.hpp"
 
