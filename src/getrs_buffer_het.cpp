@@ -1,3 +1,13 @@
+/**
+*
+* oneMKL getrs BUFFER version
+*
+* Use case - Tridiagonal linear system
+*
+* Type - Heterogeneous
+*
+**/
+
 // MKL/SYCL includes
 #include "oneapi/mkl/lapack.hpp"
 
